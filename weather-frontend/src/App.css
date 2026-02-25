@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+} */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(
+      circle at 20% 20%,
+      #1e3c72,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      #2a5298,
+      transparent 40%
+    ),
+    linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+  color: white;
+  min-height: 100vh;
+}
+.card, .forecast-card {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.app {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-form button {
+  padding: 12px 18px;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.search-form button:hover {
+  background: #ddd;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.card p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.loader {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.error {
+  margin-top: 15px;
+  color: #ffdddd;
+  font-size: 14px;
+}
+/* Forecast Section */
+.forecast-section {
+  margin-top: 50px;
+}
+
+/* Horizontal Row */
+.forecast-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* Individual Card */
+.forecast-card {
+  width: 95px;
+  padding: 14px 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  transition: all 0.3s ease;
+}
+
+.forecast-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-4px);
+}
+
+/* Day */
+.forecast-day {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Icon */
+.forecast-icon {
+  width: 42px;
+}
+
+/* Temperature */
+.forecast-temp {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Description */
+.forecast-desc {
+  font-size: 11px;
+  opacity: 0.8;
+  text-align: center;
+}
+.forecast-card svg {
+  transition: transform 0.3s ease;
+}
+
+.forecast-card:hover svg {
+  transform: scale(1.15);
+}
